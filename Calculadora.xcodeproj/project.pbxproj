@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB549CEC2C8B57C400934119 /* InterfazBitines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB549CEB2C8B57C400934119 /* InterfazBitines.swift */; };
 		FB859C792C8218A1009F8731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB859C782C8218A1009F8731 /* AppDelegate.swift */; };
 		FB859C7B2C8218A1009F8731 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB859C7A2C8218A1009F8731 /* SceneDelegate.swift */; };
 		FB859C7D2C8218A1009F8731 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB859C7C2C8218A1009F8731 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB549CEB2C8B57C400934119 /* InterfazBitines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfazBitines.swift; sourceTree = "<group>"; };
 		FB859C752C8218A1009F8731 /* Calculadora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculadora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB859C782C8218A1009F8731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB859C7A2C8218A1009F8731 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB549CE92C8B578500934119 /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				FB549CEA2C8B579300934119 /* Interfaz */,
+			);
+			path = Modelo;
+			sourceTree = "<group>";
+		};
+		FB549CEA2C8B579300934119 /* Interfaz */ = {
+			isa = PBXGroup;
+			children = (
+				FB549CEB2C8B57C400934119 /* InterfazBitines.swift */,
+			);
+			path = Interfaz;
+			sourceTree = "<group>";
+		};
 		FB859C6C2C8218A1009F8731 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +117,7 @@
 		FB859C772C8218A1009F8731 /* Calculadora */ = {
 			isa = PBXGroup;
 			children = (
+				FB549CE92C8B578500934119 /* Modelo */,
 				FB859C782C8218A1009F8731 /* AppDelegate.swift */,
 				FB859C7A2C8218A1009F8731 /* SceneDelegate.swift */,
 				FB859C7C2C8218A1009F8731 /* ViewController.swift */,
@@ -259,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB859C7D2C8218A1009F8731 /* ViewController.swift in Sources */,
+				FB549CEC2C8B57C400934119 /* InterfazBitines.swift in Sources */,
 				FB859C792C8218A1009F8731 /* AppDelegate.swift in Sources */,
 				FB859C7B2C8218A1009F8731 /* SceneDelegate.swift in Sources */,
 			);
