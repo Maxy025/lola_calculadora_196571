@@ -17,14 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqe-g7-tll">
-                                <rect key="frame" x="196.66666666666666" y="174" width="0.0" height="0.0"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HG2-dn-w9o">
+                                <rect key="frame" x="72" y="88" width="244" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto a cambiar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqe-g7-tll">
+                                <rect key="frame" x="109.00000000000001" y="174" width="175.33333333333337" height="31.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="NRU-4w-msw">
-                                <rect key="frame" x="101" y="233.66666666666666" width="191" height="272.33333333333337"/>
+                                <rect key="frame" x="101" y="265" width="191" height="272.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Lij-Vd-xOf">
                                         <rect key="frame" x="0.0" y="0.0" width="191" height="34.333333333333336"/>
@@ -56,7 +61,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="S8t-Vk-WAe">
-                                        <rect key="frame" x="0.0" y="79.333333333333343" width="191" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="79.333333333333314" width="191" height="34.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="boton_4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWb-jB-4aL">
                                                 <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="34.333333333333336"/>
@@ -85,7 +90,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dFm-4A-1Kf">
-                                        <rect key="frame" x="0.0" y="158.66666666666666" width="191" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="158.66666666666669" width="191" height="34.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="boton_7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bx-gp-7Bj">
                                                 <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="34.333333333333336"/>
@@ -114,7 +119,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Lsz-aD-4E8">
-                                        <rect key="frame" x="0.0" y="238.00000000000003" width="191" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="238" width="191" height="34.333333333333314"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="boton_igual" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXe-31-mOI">
                                                 <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="34.333333333333336"/>
@@ -137,7 +142,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="op"/>
                                                 <connections>
-                                                    <action selector="que_hace_pushar_boton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O3Z-EH-giD"/>
+                                                    <action selector="boton_escoger_operacion_pulsado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XG6-Dy-2QD"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -156,6 +161,7 @@
                     </view>
                     <connections>
                         <outlet property="operaciones" destination="bDi-hD-Smv" id="EVz-yp-D78"/>
+                        <outlet property="stack_view" destination="NRU-4w-msw" id="R98-pC-shZ"/>
                         <outlet property="texto_a_cambiar" destination="xqe-g7-tll" id="7YN-vc-iZb"/>
                     </connections>
                 </viewController>
