@@ -59,6 +59,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="S8t-Vk-WAe">
                                         <rect key="frame" x="0.0" y="79.333333333333314" width="191" height="34.333333333333343"/>
@@ -88,6 +89,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dFm-4A-1Kf">
                                         <rect key="frame" x="0.0" y="158.66666666666669" width="191" height="34.333333333333343"/>
@@ -117,6 +119,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Lsz-aD-4E8">
                                         <rect key="frame" x="0.0" y="238" width="191" height="34.333333333333314"/>
@@ -126,7 +129,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="="/>
                                                 <connections>
-                                                    <action selector="que_hace_pushar_boton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OXp-bt-jy1"/>
+                                                    <action selector="obtener_resultado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aRM-lZ-LPe"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="boton_0" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzW-QP-j1J">
@@ -146,6 +149,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -173,6 +177,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

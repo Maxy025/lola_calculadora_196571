@@ -14,14 +14,16 @@ enum estados_de_la_calculadora{
     case mostrar_resultado
 }
 class ViewController: UIViewController {
-    var estado_actual : estados_de_la_calculadora = estados_de_la_calculadora.seleccionar_numeros
+    var estado_actual : estados_de_la_calculadora = estados_de_la_calculadora.mostrar_resultado
     @IBOutlet weak var texto_a_cambiar: UILabel!
     @IBOutlet weak var operaciones: UIButton!
+    @IBOutlet weak var segundo_termino_texto: UIStackView!
     @IBOutlet weak var stack_view: UIStackView!
     
     
     var botones_interfaz: Dictionary<String, IUBotonCalculadora> = [:]
     var operacion_actual : String? = nil
+    var numero_anterior: Double = 0
     override func viewDidLoad() {
         
         
@@ -41,9 +43,24 @@ class ViewController: UIViewController {
                     
                    
         }
+        else if(estado_actual == estados_de_la_calculadora.mostrar_resultado){
+            
+            if let _mensajero_id = sender.restorationIdentifier{
+                let texto_cache = botones_interfaz[_mensajero_id]?.numero
+                texto_a_cambiar.text = "\(texto_cache!)"
+                estado_actual = estados_de_la_calculadora.seleccionar_numeros
+            }
+                    
+                   
+        }
         else if(estado_actual == estados_de_la_calculadora.escoger_operacion){
             if let _mensajero_id = sender.restorationIdentifier{
+                
                 operacion_actual = botones_interfaz[_mensajero_id]?.operacion
+                if let numero_actual: String = texto_a_cambiar.text{
+                    numero_anterior = Double(numero_actual) ?? 0.0
+                }
+                texto_a_cambiar.text = ""
                 estado_actual = estados_de_la_calculadora.seleccionar_numeros
             }
             }
@@ -98,6 +115,30 @@ class ViewController: UIViewController {
         }
         for elemento in botones_interfaz.values{
             elemento.referencia_a_boton_interfaz?.setTitle("ñ", for: .normal)
+        }
+    }
+    
+    
+    @IBAction func obtener_resultado(_ sender: Any) {
+        if numero_anterior != 0.0 && texto_a_cambiar.text != ""{
+            var numero_actual: Double = 0.0
+            if let numero_actual_string = texto_a_cambiar.text{
+                numero_actual = Double(numero_actual_string) ?? 0.0
+            }
+            
+            switch(operacion_actual){
+            case "+":
+                texto_a_cambiar.text = "\(numero_anterior + numero_actual)"
+            case "-":
+                texto_a_cambiar.text = "\(numero_anterior - numero_actual)"
+            case "*":
+                texto_a_cambiar.text = "\(numero_anterior * numero_actual)"
+            case "/":
+                texto_a_cambiar.text = "\(numero_anterior / numero_actual)"
+            default:
+                texto_a_cambiar.text = "Hay un error"
+            }
+            estado_actual = estados_de_la_calculadora.mostrar_resultado
         }
     }
 }
