@@ -17,17 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HG2-dn-w9o">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HG2-dn-w9o">
                                 <rect key="frame" x="72" y="88" width="244" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto a cambiar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqe-g7-tll">
+                                        <rect key="frame" x="34" y="48" width="175.33333333333334" height="31.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xqe-g7-tll" secondAttribute="bottom" constant="48.670000000000002" id="QV2-og-xnM"/>
+                                    <constraint firstItem="xqe-g7-tll" firstAttribute="leading" secondItem="HG2-dn-w9o" secondAttribute="leading" constant="34" id="QZt-fQ-vnG"/>
+                                    <constraint firstAttribute="trailing" secondItem="xqe-g7-tll" secondAttribute="trailing" constant="34.670000000000002" id="Zj1-Mm-4QI"/>
+                                    <constraint firstItem="xqe-g7-tll" firstAttribute="top" secondItem="HG2-dn-w9o" secondAttribute="top" constant="48" id="kq4-3I-9nE"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto a cambiar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqe-g7-tll">
-                                <rect key="frame" x="109.00000000000001" y="174" width="175.33333333333337" height="31.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="NRU-4w-msw">
                                 <rect key="frame" x="101" y="265" width="191" height="272.33333333333326"/>
                                 <subviews>
@@ -157,10 +164,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NRU-4w-msw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4qh-TL-ilI"/>
-                            <constraint firstItem="xqe-g7-tll" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WWj-b2-2Nc"/>
-                            <constraint firstItem="NRU-4w-msw" firstAttribute="top" secondItem="xqe-g7-tll" secondAttribute="bottom" constant="59.666666666666657" id="XIE-WE-2sp"/>
-                            <constraint firstItem="xqe-g7-tll" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="115" id="ycX-Ih-wb1"/>
+                            <constraint firstItem="HG2-dn-w9o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="08i-oL-e4a"/>
+                            <constraint firstItem="HG2-dn-w9o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="6bd-4a-31O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NRU-4w-msw" secondAttribute="bottom" constant="280.66666666666674" id="7LB-Se-JdJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HG2-dn-w9o" secondAttribute="trailing" constant="77" id="IfK-Bf-KBm"/>
+                            <constraint firstItem="NRU-4w-msw" firstAttribute="top" secondItem="HG2-dn-w9o" secondAttribute="bottom" constant="49" id="b9T-Js-09K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NRU-4w-msw" secondAttribute="bottom" constant="280.67000000000002" id="mEC-g1-Uph"/>
+                            <constraint firstItem="NRU-4w-msw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="101" id="pKL-Ph-BOM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NRU-4w-msw" secondAttribute="trailing" constant="101" id="tqJ-7N-PjQ"/>
                         </constraints>
                     </view>
                     <connections>
